@@ -14,12 +14,10 @@ def CountingSort(collection):
 # index pos
     for i in range(1, counting_arr_length):
         counting_arr[i] = counting_arr[i] + counting_arr[i - 1]
-    print(counting_arr)
     out = [0]*size
 
 #  placing
     for i in reversed(range(0, size)):
         out[counting_arr[collection[i] - min_item] - 1] = collection[i]
         counting_arr[collection[i] - min_item] -= 1
-    print(out)
     return out
