@@ -29,12 +29,11 @@ void print(int arr[],int n){
 }
 
 int main() {
-	// your code goes here
-	int arr[]={1, 4, 1, 2, 7, 5, 2}; // 2,2,0,1,1,0,1,0,0
+	int arr[]={1, 4, 1, 2, 7, 5, 2}; 
 	int n=sizeof(arr)/sizeof(arr[0]);
 	int rango=9;
 	print(arr,n);
 	countingSort(arr,n,rango);
-    print(arr,n);
+   	 print(arr,n);
 	return 0;
 }
