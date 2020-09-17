@@ -28,7 +28,7 @@
   - [`C++`](/Sorts/C%2B%2B/heapSort.cpp)
 - ## Insertion Sort
   - [`Python`](/Sorts/Python/InsertionSort.py)
-  - [`Java`](/Sorts/Python/InsertionSort.py)
+  - [`Java`](/Sorts/Java/InsertionSort.java)
   - [`C++`](/Sorts/C%2B%2B/insertion.h)
 - ## Merge Sort
   - [`Python`](/Sorts/Python/MergeSort.py)
