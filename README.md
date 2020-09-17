@@ -3,7 +3,7 @@
 # Table of contents
 
 1. #### [Sorts](#sorting-algorithms)
-2. #### [Data Structures](#data-structures)
+2. #### [Data Structures](#data-structures-1)
 
 # Sorting Algorithms
 
