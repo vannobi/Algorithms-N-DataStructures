@@ -7,7 +7,6 @@ def CountingSort(collection):
     # counting occurrences
     for i in range(len(collection)):
         counting_arr[collection[i]-min_item] += 1
-    print(counting_arr)
 
     k = 0
     # traverse counting_arr
@@ -17,5 +16,4 @@ def CountingSort(collection):
             counting_arr[i] -= 1
             collection[k] = i + min_item
             k += 1
-        print(counting_arr)
     return collection
