@@ -80,17 +80,17 @@ class TestCalc(unittest.TestCase):
         print('Counting Sort :: Ω(n+k)	Θ(n+k)	O(n+k)')
         test_sort(CS.CountingSort, "Counting Sort")
 
-    # def test_HeapSort(self):
-    #     print('Heap Sort :: Ω(n log(n))	Θ(n log(n))	O(n log(n))')
-    #     test_sort(HS.HeapSort, "Heap Sort")
+    def test_HeapSort(self):
+        print('Heap Sort :: Ω(n log(n))	Θ(n log(n))	O(n log(n))')
+        test_sort(HS.HeapSort, "Heap Sort")
 
     # def test_InsertionSort(self):
     #     print('Insertion Sort :: Ω(n) Θ(n^2) O(n^2)')
     #     test_sort(IS.InsertionSort, "Insertion Sort")
 
-    # def test_MergeSort(self):
-    #     print('Merge Sort :: Ω(n log(n)) Θ(n log(n)) O(n log(n))')
-    #     test_sort(MS.MergeSort, "Merge Sort")
+    def test_MergeSort(self):
+        print('Merge Sort :: Ω(n log(n)) Θ(n log(n)) O(n log(n))')
+        test_sort(MS.MergeSort, "Merge Sort")
 
     def test_QuickSort(self):
         print('Quick Sort :: Ω(n log(n)) Θ(n log(n)) O(n^2)')

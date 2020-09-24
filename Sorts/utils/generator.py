@@ -7,7 +7,7 @@ def write_numbers(sizes: list):
             fwriter = open(
                 './utils/random/{0}-{1}.txt'.format(i, cycle), 'w', encoding='utf-8')
             for j in range(i):
-                num = random.randint(0, j*17)
+                num = random.randint(0, j)
                 fwriter.write('{0}\n'.format(num))
             fwriter.close()
 
