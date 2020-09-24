@@ -1,6 +1,12 @@
 def CountingSort(collection):
-    min_item = min(collection)
-    max_item = max(collection)
+    min_item = collection[0]  # min(collection)
+    max_item = collection[0]  # max(collection)
+
+    for elem in collection:
+        if min_item > elem:
+            min_item = elem
+        if max_item < elem:
+            max_item = elem
 
     counting_arr_length = max_item - min_item+1
     counting_arr = [0]*counting_arr_length

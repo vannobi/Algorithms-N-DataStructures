@@ -2,16 +2,18 @@ import random
 
 
 def write_numbers(sizes: list):
-    for i in sizes:
-        fwriter = open('./Numbers/{0}.txt'.format(i), 'w', encoding='utf-8')
-        for j in range(i):
-            num = random.randint(0, j)
-            fwriter.write('{0}\n'.format(num))
-        fwriter.close()
+    for cycle in range(10):
+        for i in sizes:
+            fwriter = open(
+                './utils/random/{0}-{1}.txt'.format(i, cycle), 'w', encoding='utf-8')
+            for j in range(i):
+                num = random.randint(0, j*17)
+                fwriter.write('{0}\n'.format(num))
+            fwriter.close()
 
 
 if __name__ == "__main__":
-    f = open('test-settings.txt', 'r', encoding='utf-8')
+    f = open('./utils/number-settings.txt', 'r', encoding='utf-8')
     line_1 = int(f.readline())
     # results = [0]*line_1
     sizes = [0]*line_1
