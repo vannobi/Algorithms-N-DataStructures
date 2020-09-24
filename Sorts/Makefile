@@ -4,6 +4,8 @@ JV=java
 OUT=./Java/Classes
 CC=g++
 CFLAGS=-O -Wall -std=c++17
+all:
+	make clear-numbers && make gen-numbers && make java-classes && make c-build && make test-c && make test-java && make test-python
 gen-numbers:
 	$(PY) utils/generator.py
 test-python:
