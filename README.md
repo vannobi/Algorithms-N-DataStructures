@@ -13,6 +13,9 @@
 2. #### [Data Structures](#data-structures-1)
 
 # Sorting Algorithms
+Comparison
+## C++, Java and Python
+![ALL](/Sorts/results/img/c-java-python-performance.png)
 
 - ## Bubble Sort
   - [`Python`](/Sorts/Python/BubbleSort.py)
