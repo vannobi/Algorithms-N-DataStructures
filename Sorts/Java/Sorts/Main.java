@@ -11,7 +11,7 @@ public class Main {
     static void reader() {
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new FileReader("../test-settings.txt"));
+            reader = new BufferedReader(new FileReader("./utils/number-settings.txt"));
             String line = reader.readLine();
             while (line != null) {
                 System.out.println(line);

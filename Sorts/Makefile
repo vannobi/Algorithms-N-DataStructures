@@ -1,8 +1,18 @@
+PY=python
+JVC=javac -d
+JV=java
+OUT=./Java/Classes
 gen-numbers:
-	python utils/generator.py
+	$(PY) utils/generator.py
 test-python:
-	python Python/test_sorts.py
+	$(PY) Python/test_sorts.py
+java-classes: Java/Sorts/*.java
+	$(JVC) $(OUT) $^ && printf "Main-Class: Sorts.Main\n" > $(OUT)/Manifest.txt
+test-java:
+	$(JV) -cp Java/Classes/ Sorts.Main 
+clear-java-classes:
+	rm -r $(OUT)
 plot:
-	python utils/plot.py
+	$(PY) utils/plot.py
 clear-numbers:
 	find ./utils/random -name "*.txt" -type f -delete
