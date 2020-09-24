@@ -1,3 +1,5 @@
+#include <algorithm>
+#include <chrono>
 #include <iostream>
 #include <map>
 #include <string>
@@ -12,8 +14,9 @@
 #include "./src/QuickSort.hpp"
 #include "./src/SelectionSort.hpp"
 
-using namespace std;
+using namespace std::chrono;
 
+using namespace std;
 string OUTPUT_CSV_PATH = "./results/csv/c-results.csv";
 
 auto settings = readSettings();
@@ -79,6 +82,29 @@ void testSort(string name) {
   }
 }
 
+auto randomArray(int size) -> int* {
+  /* initialize random seed: */
+  srand(time(NULL));
+  int* res = new int[size]();
+  /* generate secret number between 1 and 10: */
+  for (int i = 0; i < size; i++) {
+    int random = rand() % size;
+    res[i] = random;
+  }
+  return res;
+}
+
+auto randomVector(int size) -> vector<int> {
+  /* initialize random seed: */
+  srand(time(NULL));
+  vector<int> res(size);
+  /* generate secret number between 1 and 10: */
+  for (int i = 0; i < size; i++) {
+    int random = rand() % size;
+    res[i] = random;
+  }
+  return res;
+}
 int main() {
   auto Algorithms = {"Bubble Sort",    "Counting Sort", "Heap Sort",
                      "Insertion Sort", "Merge Sort",    "Quick Sort",
@@ -86,11 +112,12 @@ int main() {
   for (auto& name : Algorithms) {
     results[name] = vector<double>(settings.size());
   }
-  testSort("Quick Sort");
-  testSort("Counting Sort");
-  testSort("Merge Sort");
+  // testSort("Bubble Sort");
+  testSort("Quick Sort");     // y
+  testSort("Counting Sort");  // y
+  testSort("Merge Sort");     // y
   // testSort("Counting Sort");
-  testSort("Heap Sort");
+  testSort("Heap Sort");  // y
   // testSort("Insertion Sort");
   string buff;
   for (auto& name : Algorithms) {

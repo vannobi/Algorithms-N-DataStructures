@@ -3,7 +3,7 @@ JVC=javac -d
 JV=java
 OUT=./Java/Classes
 CC=g++
-CFLAGS=-g -Wall -std=c++17
+CFLAGS=-O -Wall -std=c++17
 gen-numbers:
 	$(PY) utils/generator.py
 test-python:
